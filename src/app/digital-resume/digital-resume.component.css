@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+#header{
+
+    width:100vw ;
+    /* height:fit-content ; */
+    background-color: rgb(29, 29, 29);
+    color: white;
+}
+#quote{
+    font-family: 'Yuji Syuku', serif;
+    
+}
+#source{
+    font-family:-apple-system, 'Open Sans',BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    color: white;
+}
+#containerdiv{
+    display: flex;
+    flex-wrap:nowrap;
+    flex-direction:row;
+    margin: auto;
+    padding: 1rem 6rem;
+    background-color: lightseagreen;
+}
+#personalDetailDiv{
+    padding: 0rem 1rem;
+    margin: 1rem;
+    width: 45vw;
+    background-color: khaki;
+
+}
+#educationalDetails{
+    justify-content: left;
+    margin: 1rem;
+    padding: 0rem 1rem;
+    width: 45vw;
+    background-color:lightcoral;
+}
+.tabledata{
+    width: 15vw;
+    text-align: left;
+}
+.tablelable{
+    width: 10vw;
+    text-align: left;
+}
+.headings{
+    width:fit-content; 
+    margin: 0;
+}
