@@ -1,83 +1,197 @@
+<!-- header div -->
 <div class="container-fluid" id="header">
     <h1 class="text-center pb-1 h-1">Resume Generator</h1>
 
-    <blockquote class="blockquote">
-        <p class="text-center h-4 pb-1" id="quote">Life is our resume. It is our story to tell, and the choices we make
-            write the chapters.</p>
-        <footer class="blockquote-footer text-center mb-1" id="source">Matthew McConaughey,<a
-                href="https://www.goodreads.com/work/quotes/78998213-greenlights" target="_blank"> Greenlights</a>
+    <!-- quote -->
+
+    <blockquote class="blockquote mb-0">
+        <p class="text-center h-4" id="quote">Life is our resume. It is our story to tell, and the choices we make write
+            the chapters.</p>
+        <footer class="blockquote-footer text-center" id="source">Matthew McConaughey,
+            <a href="https://www.goodreads.com/work/quotes/78998213-greenlights" target="_blank"> Greenlights</a>
         </footer>
     </blockquote>
+    <br>
 </div>
 
-<div id="containerdiv">
+<!-- Main div to get form values  -->
+<div class="container-fluid" id="maincontainerdiv">
 
-    <div class="container text-center py-2" id="personalDetailDiv">
-        <h4 class="headings">Personal Details:</h4>
-        <br>
+    <!-- Personal Detail div element -->
+
+    <div class="container py-2" id="personalDetailDiv">
+        <h4 class="text-center">Personal Details -</h4>
+
+        <!-- Personal Data table  -->
+
         <table class="table table-borderless" id="personalDetailTable">
+            <br>
+            <h4 class="headings">About</h4>
+            <br>
 
             <tbody>
                 <tr>
-                    <td class="tablelable"><label for="Frirstname">Frirstname</label></td>
+                    <td class="tablelable"><label for="Frirstname">*Frirstname</label></td>
                     <td class="tabledata"><input type="text" id="name" placeholder="e.g. Sachin"></td>
+
+                    <td class="tablelable"><label for="Date of Birth">*Date of Birth</label> </td>
+                    <td class="tabledata"><input type="date" name="dob" id="dob">
+                        <!-- Html elements for displaying error messages for invalid Date Of Birth-->
+                        
+                    </td>
                 </tr>
+
                 <tr>
                     <td class="tablelable"><label for="middlename ">Middlename </label></td>
                     <td class="tabledata"><input type="text" id="middlename" placeholder="e.g. Ramesh"></td>
-                </tr>
-                <tr>
-                    <td class="tablelable"><label for="Lastname">Lastname </label></td>
-                    <td class="tabledata"><input type="text" id="Lastname" placeholder="e.g. Tendulkar"></td>
-                </tr>
-                <tr>
-                    <td class="tablelable"><label for="Date of Birth">Date of Birth</label> </td>
-                    <td class="tabledata"><input type="date" name="dob" id="dob"></td>
-                </tr>
-                <tr>
+
                     <td class="tablelable"><label for="gender">Gender</label></td>
-                    <td class="tablelable">
+                    <td class="tabledata">
                         <select name="gender" class="tabledata">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                     </td>
+                </tr>
+                <tr>
+                    <td class="tablelable"><label for="Lastname">*Lastname </label></td>
+                    <td class="tabledata"><input type="text" id="Lastname" placeholder="e.g. Tendulkar"></td>
+                </tr>
+                <br>
+                <h4 class="headings">Contact Details</h4>
+                <br>
+                <tr>
+                    <td class="tablelable"><label for="contactNo">Contact No.</label></td>
+                    <td class="tabledata"><input type="text" id="contactNo" placeholder="9876543210"></td>
+                    <td class="tablelable"><label for="telephoneNo">Telephone</label></td>
+                    <td class="tabledata"><input type="text" id="telephoneNo" placeholder="020-7654321"></td>
+                </tr>
+                <tr>
+                    <td class="tablelable"><label for="email ">E-Mail</label></td>
+                    <td class="tabledata"><input type="email" id="email" placeholder="me@gmail.com"></td>
+                </tr>
+                <br>
+                <h4 class="headings">Address</h4>
+                <br>
+                <tr>
+                    <td class="tablelable"><label for="state">State</label></td>
+                    <td class="tabledata"><input type="text" id="State" placeholder="Maharashtra"></td>
+                    <td class="tablelable"><label for="city">City</label></td>
+                    <td class="tabledata"><input type="text" id="city" placeholder="Pune"></td>
+                </tr>
+                <tr>
+                    <td class="tablelable"><label for="pincode">Pin Code</label></td>
+                    <td class="tabledata"><input type="text" id="pincode" placeholder="411041"></td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div id="educationalDetails">
-        <h4 class="headings">Educational Details:</h4>
-        <br>
-        <table class="table table-borderless" id="personalDetailTable">
+
+        <!-- Educational Detail div element -->
+
+    <div class="container py-2"  id="educationalDetails">
+        <h4 class="text-center">Educational Details -</h4>
+        <table class="table table-borderless" id="10thClassDetailTable">
             <tbody>
+                <br>
+                <h4 class="headings">Class 10<sup>th</sup></h4>
+                <br>
                 <tr>
-                    <td class="tablelable"><label for="Frirstname">Frirstname</label></td>
-                    <td class="tabledata"><input type="text" id="name" placeholder="e.g. Sachin"></td>
+                    <td class="tablelable"><label for="school">School</label></td>
+                    <td class="tabledata"><input type="text" id="schoolName" placeholder="Morden High School"></td>
+                    <td class="tablelable"><label for="passingYear">Passing Year</label></td>
+                    <td class="tabledata"><input type="month" id="12thpassingYear"></td>
                 </tr>
                 <tr>
-                    <td class="tablelable"><label for="middlename ">Middlename </label></td>
-                    <td class="tabledata"><input type="text" id="middlename" placeholder="e.g. Ramesh"></td>
+                    <td class="tablelable"><label for="percentage">Percentage/CGPA</label></td>
+                    <td class="tabledata"><input type="text" id="10thpercentage" placeholder="90%"></td>
+                </tr>
+                <br>
+                <h4 class="headings">Class 12<sup>th</sup></h4>
+                <br>
+                <tr>
+                    <td class="tablelable"><label for="college">College</label></td>
+                    <td class="tabledata"><input type="text" id="collegeName" placeholder="Morden College"></td>
+                    <td class="tablelable"><label for="passingYear">Passing Year</label></td>
+                    <td class="tabledata"><input type="month" id="12thpassingYear"></td>
                 </tr>
                 <tr>
-                    <td class="tablelable"><label for="Lastname">Lastname </label></td>
-                    <td class="tabledata"><input type="text" id="Lastname" placeholder="e.g. Tendulkar"></td>
-                </tr>
-                <tr>
-                    <td class="tablelable"><label for="Date of Birth">Date of Birth</label> </td>
-                    <td class="tabledata"><input type="date" name="dob" id="dob"></td>
-                </tr>
-                <tr>
-                    <td class="tablelable"><label for="gender">Gender</label></td>
-                    <td class="tablelable">
-                        <select name="gender" class="tabledata">
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
+                    <td class="tablelable"><label for="percentage">Percentage/CGPA</label></td>
+                    <td class="tabledata"><input type="text" id="10thpercentage" placeholder="80%"></td>
+                    <td class="tablelable"><label for="sream">Sream</label></td>
+                    <td class="tabledata">
+                        <select name="Stream" class="tabledata">
+                            <option value="Arts">Arts</option>
+                            <option value="Commerce">Commerce</option>
+                            <option value="Science">Science</option>
                         </select>
                     </td>
                 </tr>
+                <br>
+                <h4 class="headings">Graduation</h4>
+                <br>
+                <tr>
+                    <td class="tablelable"><label for="institute">Institute</label></td>
+                    <td class="tabledata"><input type="text" id="graduationInstitute"
+                            placeholder="Ab College of Engineering "></td>
+                    <td class="tablelable"><label for="passingYear">Passing Year</label></td>
+                    <td class="tabledata"><input type="month" id="graduationthpassingYear"></td>
+                </tr>
+                <tr>
+                    <td class="tablelable"><label for="percentage">Percentage/CGPA</label></td>
+                    <td class="tabledata"><input type="text" id="graduationthpercentage" placeholder="8.25"></td>
+                    <td class="tablelable"><label for="fieldofstudy">Field/Branch</label></td>
+                    <td class="tabledata"><input type="text" id="fieldofstudy" placeholder="Chemical Engineering"></td>
+                </tr>
+                <br>
             </tbody>
         </table>
+        <h6 class="headings">Add another Qualification <button type="button"
+                class="btn btn-secondary btn-sm">Add</button></h6>
 
+        <br>
+
+    </div>
+
+    <!-- Techical Detail div element -->
+
+    <div class="container py-2" id="techicalskilldetails">
+        <h4 class="text-center">Technical Skills -</h4>
+
+        <!-- Personal Data table  -->
+
+        <table class="table table-borderless" id="personalDetailTable">
+
+            <tbody>
+               <tr class="tablelable text-center " >
+                   <td>
+                       <label for="">Leadership</label>
+                    </td>
+                </tr>
+               <tr class="tablelable text-center " ><label for="">Leadership</label></tr>
+               <tr class="tablelable text-center " ><label for="">Leadership</label></tr>
+               <tr class="tablelable text-center " ><label for="">Leadership</label></tr>
+               <tr class="tablelable text-center " ><label for="">Leadership</label></tr>
+               
+               
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- Cv preview div -->
+<div class="container-fluid text-center p-2" id=""  >
+    <div class="row">
+        <div class="col-md-4 p-2 " id="leftsidecv" >
+            <!-- first column -->
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus sunt accusantium quae eaque possimus iusto alias maiores minus magnam fuga dignissimos, quos sapiente, impedit quaerat nesciunt similique officiis dicta nisi.</p>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos cupiditate, obcaecati vitae blanditiis laboriosam culpa aspernatur quae! Minima quidem cum aperiam vero reiciendis? Quia quis inventore delectus consectetur beatae adipisci.</p>
+        </div>
+        <div class="col-md-8 p-2" id="rightsidecv">
+            <!-- second column -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem dolor, obcaecati dolore eius in delectus optio ex ducimus exercitationem voluptatibus et? Animi, similique. Necessitatibus porro iusto, quas adipisci sapiente illo.</p>
+        </div>
     </div>
 </div>

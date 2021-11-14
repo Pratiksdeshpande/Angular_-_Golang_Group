@@ -1,13 +1,10 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-color: rgb(233, 233, 233);
-}
 #maindiv{
     display: flex;
     flex-direction:row;
     align-items: center; 
     justify-content: center;
+    width: 100%;
+    background-color: rgb(29, 29, 29);
     /* height: 50vw;
     width: 60vw; */
     margin: auto;

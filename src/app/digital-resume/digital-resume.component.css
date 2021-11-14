@@ -3,10 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
 #header{
 
-    width:100vw ;
-    /* height:fit-content ; */
+    width:100% ;
     background-color: rgb(29, 29, 29);
     color: white;
+    /* height:fit-content ; */
+    margin-bottom: 0rem;
 }
 #quote{
     font-family: 'Yuji Syuku', serif;
@@ -15,38 +16,67 @@
 #source{
     font-family:-apple-system, 'Open Sans',BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     color: white;
+    margin-bottom: 0rem;
 }
-#containerdiv{
-    display: flex;
-    flex-wrap:nowrap;
-    flex-direction:row;
+#maincontainerdiv{
+    display: none;
+    /* display: flex; */
+    flex-direction:column;
+    justify-content: center;
     margin: auto;
     padding: 1rem 6rem;
     background-color: lightseagreen;
 }
 #personalDetailDiv{
-    padding: 0rem 1rem;
-    margin: 1rem;
-    width: 45vw;
+    padding: 1rem 1rem;
+    margin: 2% auto;
+    width: 75%;
     background-color: khaki;
-
+    border-radius: 25px;
+    
 }
 #educationalDetails{
-    justify-content: left;
-    margin: 1rem;
-    padding: 0rem 1rem;
-    width: 45vw;
+    margin: 2% auto;
+    padding: 1rem 1rem;
+    width: 75%;
+    border-radius: 25px;
     background-color:lightcoral;
 }
-.tabledata{
-    width: 15vw;
-    text-align: left;
-}
-.tablelable{
-    width: 10vw;
-    text-align: left;
+#techicalskilldetails{
+    margin: 2% auto;
+    padding: 1rem 1rem;
+    width: 75%;
+    border-radius: 25px;
+    background-color:khaki;
 }
 .headings{
     width:fit-content; 
     margin: 0;
+}
+.tablelable{
+    width: 30%;
+    text-align: left;
+    padding: 0.3rem 2rem 1rem 2rem;
+    font-weight: bold;
+}
+.tabledata{
+    width: 40%;
+    text-align: left;
+}
+.tabledata:hover{
+    transform: scale(1.05);
+}
+.message{
+    width: 12em;
+    font-weight: 100;
+    border-radius: 5px;
+    text-align: start;
+    color: rgb(255 0 0);
+    background-color: #ffd0d0;
+}
+#leftsidecv{
+    background-color: coral;
+}
+#rightsidecv{
+    background-color: darkgreen;
 }
