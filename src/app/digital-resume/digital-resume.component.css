@@ -19,8 +19,8 @@
     margin-bottom: 0rem;
 }
 #maincontainerdiv{
-    display: none;
-    /* display: flex; */
+    /* display: none; */
+    display: flex;
     flex-direction:column;
     justify-content: center;
     margin: auto;
@@ -52,6 +52,8 @@
 .headings{
     width:fit-content; 
     margin: 0;
+    font-weight:bold;
+    
 }
 .tablelable{
     width: 30%;
@@ -74,9 +76,49 @@
     color: rgb(255 0 0);
     background-color: #ffd0d0;
 }
+#cvcontainer{
+    /* display: none; */
+    width: auto;
+}
 #leftsidecv{
-    background-color: coral;
+    background-color: rgb(0, 26, 87);
 }
 #rightsidecv{
-    background-color: darkgreen;
+    background-color: rgb(255, 187, 187);
+}
+#userProfileImage{
+    width: 60%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding:5px ;
+    margin: 25px;
+}
+.cvLeftHeadings{
+    text-align: left;
+    color: white;
+
+}
+#cvHeaderName{
+    background-color: rgb(231, 231, 231);
+    font-weight: 900;
+    padding: 30px 50px;
+
+}
+#contactdiv{
+    display: flex;
+    flex-direction:column;
+    padding: 15px;
+}
+.contactfield{
+    display: flex;
+    flex-direction: row;
+    padding: 7px 20px 6px 40px ;
+}
+.contactContent{
+    height: auto;
+    padding: 18px 10px;
+    justify-content: center;
+    align-items:flex-start;
+    color: white;
 }
