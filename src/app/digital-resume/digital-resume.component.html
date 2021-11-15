@@ -115,7 +115,17 @@
                             </mat-form-field>
                         </p>
                     </td>
-                    
+                </tr>
+                <br>
+                <h4 class="headings">Sammary</h4>
+                <br>
+                <tr>
+                    <td>
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Write a summary about you.</mat-label>
+                            <textarea [(ngModel)]="summary" id="summary" matInput placeholder="Ex. Creative software developer with over 5 years of experience in...."></textarea>
+                          </mat-form-field>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -212,12 +222,13 @@
         </table>
     </div>
 
-</div>
-
+    
 <!-- div for generating the CV -->
 <div class="container-fluid text-center">
     <button class="btn btn-primary btn-lg text-center" (click)="generatecv()">Generate CV</button>
 </div>
+</div>
+
 
 
 <!-- Div for displaying how the cv will look like -->
@@ -270,9 +281,7 @@
                 <div class="card-header display-5 text-left">
                     Summary
                 </div>
-                <div id="usersummary" class="card-body text-left">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, error quae saepe corporis
-                    necessitatibus sequi quod culpa sed architecto vero!
+                <div id="usersummary" class="card-body text-left">{{summary}}
                 </div>
             </div>
         </div>

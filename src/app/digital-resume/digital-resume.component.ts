@@ -32,5 +32,6 @@ export class DigitalResumeComponent  {
   public city ='';
   public state ='';
   public pincode ='';
+  public summary='';
   
   };

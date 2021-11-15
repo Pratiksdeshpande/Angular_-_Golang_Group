@@ -33,6 +33,7 @@
     width: 75%;
     background-color: khaki;
     border-radius: 25px;
+    border: 1.5px solid black;
     
 }
 #educationalDetails{
@@ -75,6 +76,9 @@
     text-align: start;
     color: rgb(255 0 0);
     background-color: #ffd0d0;
+}
+.example-full-width{
+    width: 200%;
 }
 #cvcontainer{
     /* display: none; */
