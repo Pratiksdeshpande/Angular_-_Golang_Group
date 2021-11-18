@@ -27,7 +27,7 @@
     justify-content: center;
     margin: auto;
     padding: 1rem 6rem;
-    background-color: lightseagreen;
+    background-color:#dbdbdb;
 }
 
  .headings{
@@ -41,7 +41,7 @@
     padding: 1rem 1rem;
     margin: 10px auto;
     width: auto;
-    background-color: khaki;
+    background-color:#dbdbdb;
     border-radius: 25px;
     border: 1.5px solid black;
     
@@ -63,7 +63,7 @@
     padding: 1rem 1rem;
     margin: 10px auto;
     width: auto;
-    background-color:lightcoral;
+    background-color:#dbdbdb;
     border-radius: 25px;
     border: 1.5px solid black;
  }
