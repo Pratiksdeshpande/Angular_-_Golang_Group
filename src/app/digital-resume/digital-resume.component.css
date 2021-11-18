@@ -9,15 +9,17 @@
     /* height:fit-content ; */
     margin-bottom: 0rem;
 }
-#quote{
+ #quote{
     font-family: 'Yuji Syuku', serif;
     
 }
-#source{
+ #source{
     font-family:-apple-system, 'Open Sans',BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     color: white;
     margin-bottom: 0rem;
 }
+
+
 #maincontainerdiv{
     /* display: none; */
     display: flex;
@@ -27,48 +29,60 @@
     padding: 1rem 6rem;
     background-color: lightseagreen;
 }
-#personalDetailDiv{
+
+ .headings{
+    margin: auto;
+    padding: 20px;
+    font-weight:bold;
+    
+ }
+
+ #personalDetailDiv{
     padding: 1rem 1rem;
-    margin: 2% auto;
-    width: 75%;
+    margin: 10px auto;
+    width: auto;
     background-color: khaki;
     border-radius: 25px;
     border: 1.5px solid black;
     
-}
-#educationalDetails{
-    margin: 2% auto;
+ }
+  .personalDetailFieldDiv{
+    padding: auto 20px ;
+    margin: auto;
+  }
+  .personalDataFields{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    margin: auto;
+  } 
+
+
+ #educationalDetailDiv{
     padding: 1rem 1rem;
-    width: 75%;
-    border-radius: 25px;
+    margin: 10px auto;
+    width: auto;
     background-color:lightcoral;
-}
-#techicalskilldetails{
-    margin: 2% auto;
-    padding: 1rem 1rem;
-    width: 75%;
     border-radius: 25px;
-    background-color:khaki;
-}
-.headings{
-    width:fit-content; 
-    margin: 0;
-    font-weight:bold;
-    
-}
-.tablelable{
-    width: 30%;
-    text-align: left;
-    padding: 0.3rem 2rem 1rem 2rem;
-    font-weight: bold;
-}
-.tabledata{
-    width: 40%;
-    text-align: left;
-}
-.tabledata:hover{
-    transform: scale(1.05);
-}
+    border: 1.5px solid black;
+ }
+  .educationalDetailFieldDiv{
+    padding: auto 20px ;
+    margin: auto;
+  }
+   .educationalDataFields{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    margin: auto;
+   }
+
+  .example-full-width{
+    width: 100%;
+  }
+
 .message{
     width: 12em;
     font-weight: 100;
@@ -77,9 +91,7 @@
     color: rgb(255 0 0);
     background-color: #ffd0d0;
 }
-.example-full-width{
-    width: 200%;
-}
+
 #cvcontainer{
     /* display: none; */
     width: auto;

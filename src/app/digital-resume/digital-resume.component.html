@@ -1,4 +1,4 @@
-<!-- header div -->
+<!-- header div container-->
 <div class="container-fluid" id="header">
     <p class="text-center display-4 pb-1">Resume Generator</p>
 
@@ -15,223 +15,160 @@
     <br>
 </div>
 
-<!-- Main div to get form values  -->
+<!-- Main div container-->
 <div class="container-fluid" id="maincontainerdiv">
 
-    <!-- Personal Detail div element -->
 
-    <div class="container py-2" id="personalDetailDiv">
-        <h1 class="text-center">Personal Details</h1>
-        
+    <!-- Personal Details div-->
 
-        <!-- Personal Data table  -->
+    <div class="container col py-2" id="personalDetailDiv">
+        <h1 class="text-left">Personal Details</h1>
+        <form>
 
-        <table class="table table-borderless" id="personalDetailTable">
-            <br>
-            <h4 class="headings text-center">About</h4>
-            <br>
+            <!-- About section -->
+            <h4 class="text-center headings">About</h4>
 
-            <tbody>
-                <tr>
-                    <td class="tablelable">
-                        <p>
-                            <mat-form-field appearance="outline">
-                                <mat-label>First Name</mat-label>
-                                <input [(ngModel)]="firstname" id="firstname" matInput placeholder="e.g. Sachin">
-                            </mat-form-field>
-                        </p>
-                    </td>
-                    <td class="tablelable">
-                        <p>
-                            <mat-form-field appearance="outline">
-                                <mat-label>Middle Name</mat-label>
-                                <input [(ngModel)]="middlename" id="firstname" matInput placeholder="e.g. Ramesh">
-                            </mat-form-field>
-                        </p>
-                    </td>
-                    <td class="tablelable">
-                        <p>
-                            <mat-form-field appearance="outline">
-                                <mat-label>Last Name</mat-label>
-                                <input [(ngModel)]="Lastname" id="firstname" matInput placeholder="e.g. Tendulkar">
-                            </mat-form-field>
-                        </p>
-                    </td>
-                </tr>
-                <br>
-                <h4 class="headings">Contact Details</h4>
-                <br>
-                <tr>
-                    <td class="tablelable">
-                        <p>
-                            <mat-form-field appearance="outline">
-                                <mat-label>Contact No.</mat-label>
-                                <input [(ngModel)]="contactNo" id="contactNo" matInput placeholder="9876543210">
-                            </mat-form-field>
-                        </p>
-                    </td>
-                    <td class="tablelable">
-                        <p>
-                            <mat-form-field appearance="outline">
-                                <mat-label>Telephone No.</mat-label>
-                                <input [(ngModel)]="telephoneNo" id="telephoneNo" matInput placeholder="020-7654321" type="tel">
-                            </mat-form-field>
-                        </p>
-                    </td>
-                    <td class="tablelable">
-                        <p>
-                            <mat-form-field appearance="outline">
-                                <mat-label>E-Mail Address</mat-label>
-                                <input [(ngModel)]="email" id="email" matInput placeholder="me@gmail.com" type="email">
-                            </mat-form-field>
-                        </p>
-                    </td>
-                </tr>
-                <br>
-                <h4 class="headings">Address</h4>
-                <br>
-                <tr>
-                    <td class="tablelable">
-                        <p>
-                            <mat-form-field appearance="outline">
-                                <mat-label>City</mat-label>
-                                <input [(ngModel)]="city" id="city" matInput placeholder="Pune">
-                            </mat-form-field>
-                        </p>
-                    </td>
-                    <td class="tablelable">
-                        <p>
-                            <mat-form-field appearance="outline">
-                                <mat-label>State</mat-label>
-                                <input [(ngModel)]="state" id="state" matInput placeholder="Maharashtra">
-                            </mat-form-field>
-                        </p>
-                    </td>
-                    <td class="tablelable">
-                        <p>
-                            <mat-form-field appearance="outline">
-                                <mat-label>Pin Code</mat-label>
-                                <input [(ngModel)]="pincode" id="pincode" matInput placeholder="411041">
-                            </mat-form-field>
-                        </p>
-                    </td>
-                </tr>
-                <br>
-                <h4 class="headings">Sammary</h4>
-                <br>
-                <tr>
-                    <td>
-                        <mat-form-field class="example-full-width" appearance="outline">
-                            <mat-label>Write a summary about you.</mat-label>
-                            <textarea [(ngModel)]="summary" id="summary" matInput placeholder="Ex. Creative software developer with over 5 years of experience in...."></textarea>
-                          </mat-form-field>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+            <div class="personalDetailFieldDiv row container-fluid" id="aboutdiv">
 
-    <!-- Educational Detail div element -->
+                <div class="personalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input [(ngModel)]="firstname" id="firstname" matInput placeholder="e.g. Sachin">
+                    </mat-form-field>
+                </div>
 
-    <div class="container py-2" id="educationalDetails">
-        <h4 class="text-center">Educational Details -</h4>
-        <table class="table table-borderless" id="10thClassDetailTable">
-            <tbody>
-                <br>
-                <h4 class="headings">Class 10<sup>th</sup></h4>
-                <br>
-                <tr>
-                    <td class="tablelable"><label for="school">School</label></td>
-                    <td class="tabledata"><input type="text" id="schoolName" placeholder="Morden High School"></td>
-                    <td class="tablelable"><label for="passingYear">Passing Year</label></td>
-                    <td class="tabledata"><input type="month" id="12thpassingYear"></td>
-                </tr>
-                <tr>
-                    <td class="tablelable"><label for="percentage">Percentage/CGPA</label></td>
-                    <td class="tabledata"><input type="text" id="10thpercentage" placeholder="90%"></td>
-                </tr>
-                <br>
-                <h4 class="headings">Class 12<sup>th</sup></h4>
-                <br>
-                <tr>
-                    <td class="tablelable"><label for="college">College</label></td>
-                    <td class="tabledata"><input type="text" id="collegeName" placeholder="Morden College"></td>
-                    <td class="tablelable"><label for="passingYear">Passing Year</label></td>
-                    <td class="tabledata"><input type="month" id="12thpassingYear"></td>
-                </tr>
-                <tr>
-                    <td class="tablelable"><label for="percentage">Percentage/CGPA</label></td>
-                    <td class="tabledata"><input type="text" id="10thpercentage" placeholder="80%"></td>
-                    <td class="tablelable"><label for="sream">Sream</label></td>
-                    <td class="tabledata">
-                        <select name="Stream" class="tabledata">
-                            <option value="Arts">Arts</option>
-                            <option value="Commerce">Commerce</option>
-                            <option value="Science">Science</option>
-                        </select>
-                    </td>
-                </tr>
-                <br>
-                <h4 class="headings">Graduation</h4>
-                <br>
-                <tr>
-                    <td class="tablelable"><label for="institute">Institute</label></td>
-                    <td class="tabledata"><input type="text" id="graduationInstitute"
-                            placeholder="Ab College of Engineering "></td>
-                    <td class="tablelable"><label for="passingYear">Passing Year</label></td>
-                    <td class="tabledata"><input type="month" id="graduationthpassingYear"></td>
-                </tr>
-                <tr>
-                    <td class="tablelable"><label for="percentage">Percentage/CGPA</label></td>
-                    <td class="tabledata"><input type="text" id="graduationthpercentage" placeholder="8.25"></td>
-                    <td class="tablelable"><label for="fieldofstudy">Field/Branch</label></td>
-                    <td class="tabledata"><input type="text" id="fieldofstudy" placeholder="Chemical Engineering"></td>
-                </tr>
-                <br>
-            </tbody>
-        </table>
-        <h6 class="headings">Add another Qualification <button type="button"
-                class="btn btn-secondary btn-sm">Add</button></h6>
+                <div class="personalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Middle Name</mat-label>
+                        <input [(ngModel)]="middlename" id="middlename" matInput placeholder="e.g. Ramesh">
+                    </mat-form-field>
+                </div>
 
-        <br>
+                <div class="personalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input [(ngModel)]="Lastname" id="Lastname" matInput placeholder="e.g. Tendulkar">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <!-- contact section -->
+            <h4 class="text-center headings">Contact</h4>
+
+            <div class="personalDetailFieldDiv row container-fluid" id="contactdata">
+
+                <div class="personalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Phone No.</mat-label>
+                        <input [(ngModel)]="contactNo" id="contactNo" matInput placeholder="9834110970">
+                    </mat-form-field>
+                </div>
+
+                <div class="personalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Telephone No.</mat-label>
+                        <input [(ngModel)]="telephoneNo" id="telephoneNo" matInput placeholder="020-7654321">
+                    </mat-form-field>
+                </div>
+
+                <div class="personalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>E-mail Address</mat-label>
+                        <input [(ngModel)]="email" id="email" matInput placeholder="pdeshpande666@gmail.com">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <!-- Address section -->
+            <h4 class="text-center headings">Address</h4>
+
+            <div class="personalDetailFieldDiv row container-fluid" id="addressdata">
+
+                <div class="personalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>City</mat-label>
+                        <input [(ngModel)]="city" id="city" matInput placeholder="Pune">
+                    </mat-form-field>
+                </div>
+
+                <div class="personalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>State</mat-label>
+                        <input [(ngModel)]="state" id="state" matInput placeholder="Maharashtra">
+                    </mat-form-field>
+                </div>
+
+                <div class="personalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Pin-Code</mat-label>
+                        <input [(ngModel)]="pincode" id="pincode" matInput placeholder="411041">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <!-- Sammary section  -->
+            <h4 class="text-center headings">Sammary</h4>
+
+            <div class="personalDetailFieldDiv row container-fluid" id="addressdata">
+
+                <div class="personalDataFields col container-fluid">
+                    <mat-form-field class="example-full-width personalDataFields" appearance="outline">
+                        <mat-label>Short description</mat-label>
+                        <textarea [(ngModel)]="sammary" id="sammary" rows="5" matInput
+                            placeholder="Write a short description about you. Ex. Creative software developer with over 5 years of experience in...."></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+
+        </form>
 
     </div>
 
-    <!-- Techical Detail div element -->
+    <!-- Educational Details div-->
+    <div class="container col py-2" id="educationalDetailDiv">
+        <h1 class="text-left">Educational Details</h1>
 
-    <div class="container py-2" id="techicalskilldetails">
-        <h4 class="text-center">Technical Skills -</h4>
+        <form>
 
-        <!-- Personal Data table  -->
+            <!-- Educational details Field -->
+            <div class="educationalDetailFieldDiv row container-fluid">
 
-        <table class="table table-borderless" id="personalDetailTable">
+                <div class="educationalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Institute Name</mat-label>
+                        <input [(ngModel)]="instituteName" id="instituteName" matInput placeholder="ABC college">
+                    </mat-form-field>
+                </div>
 
-            <tbody>
-                <tr class="tablelable text-center ">
-                    <td>
-                        <label for="">Leadership</label>
-                    </td>
-                </tr>
-                <tr class="tablelable text-center "><label for="">Leadership</label></tr>
-                <tr class="tablelable text-center "><label for="">Leadership</label></tr>
-                <tr class="tablelable text-center "><label for="">Leadership</label></tr>
-                <tr class="tablelable text-center "><label for="">Leadership</label></tr>
+                <div class="educationalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Passing Year</mat-label>
+                        <input [(ngModel)]="passingYear" id="passingYear" matInput placeholder="2021">
+                    </mat-form-field>
+                </div>
+
+                <div class="educationalDataFields col container-fluid">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Percentage/CGPA</mat-label>
+                        <input [(ngModel)]="percentage" id="percentage" matInput placeholder="78%">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="text-center container-fluid">
+                <button type="button" class="btn btn-lg btn-warning" >Add Field</button>
+            </div>
 
 
-            </tbody>
-        </table>
+        </form>
     </div>
 
-    
-<!-- div for generating the CV -->
-<div class="container-fluid text-center">
-    <button class="btn btn-primary btn-lg text-center" (click)="generatecv()">Generate CV</button>
-</div>
+    <!-- Generate CV button div -->
+    <div class="container-fluid text-center">
+        <button class="btn btn-primary btn-lg text-center" (click)="generatecv()">Generate CV</button>
+    </div>
 </div>
 
-
-
-<!-- Div for displaying how the cv will look like -->
+<!-- CV Preview -->
 <div *ngIf="display" class="container-fluid" id="cvcontainer">
     <div class="row">
         <div class="col-md-4 p-2 text-center" id="leftsidecv">
@@ -253,26 +190,27 @@
                     <button mat-icon-button color="primary" class="m-2">
                         <mat-icon color="accent">local_phone</mat-icon>
                     </button>
-                    <div id="usertelephoneno" class="contactContent">{{telephoneNo}}</div>
+                    <div id="usertelephoneno" class="contactContent">{{telephoneNo | currency: 'INR'}}</div>
                 </div>
                 <div class="contactfield">
                     <button mat-icon-button color="primary" class="m-2">
                         <mat-icon color="accent">email</mat-icon>
                     </button>
-                    <div id="useremailaddress" class="contactContent">{{email}}</div>
+                    <div id="useremailaddress" class="contactContent">{{email | lowercase}}</div>
                 </div>
                 <div class="contactfield">
                     <button mat-icon-button color="primary" class="m-2">
                         <mat-icon color="accent">place</mat-icon>
                     </button>
-                    <div id="useraddress" class="contactContent">{{city}}, {{state}} - {{pincode}}</div>
+                    <div id="useraddress" class="contactContent">{{city}}, {{state}} - {{pincode | number:'6.0-0'}}
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-md-8 p-5" id="rightsidecv">
             <!-- second column -->
             <div class="container-fluid" id="cvHeaderName">
-                <p id="username" class="display-1 text-center">{{firstname}} {{Lastname}}</p>
+                <p id="username" class="display-1 text-center">{{firstname | uppercase}} {{Lastname | uppercase}}</p>
                 <hr>
                 <br>
             </div>
@@ -281,18 +219,15 @@
                 <div class="card-header display-5 text-left">
                     Summary
                 </div>
-                <div id="usersummary" class="card-body text-left">{{summary}}
+                <div id="usersummary" class="card-body text-left">{{sammary}}
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- <div class="container-fluid text-center">
-    <form [formGroup]="rform" (ngSubmit)="post(rform.value)" >
-        <input type="text" placeholder="Name" formControlName="mName" >
-        <button type="submit">submit</button>
-        <input type="text" placeholder="Lastname" formControlName="lName">
-        <input type="month" formControlName="month">
-    </form>
-</div> -->
+<!-- Print CV button div-->
+<div class="container-fluid text-center">
+    <button printSectionId="cvcontainer" styleSheetFile="digital-resume.component.css" ngxPrint
+        class="btn btn-primary btn-lg" type="button">Print</button>
+</div>

@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from "@angular/material/input";
-
+import { NgxPrintModule } from "ngx-print";
 
 
 @NgModule({
@@ -26,7 +26,9 @@ import { MatInputModule } from "@angular/material/input";
     BrowserAnimationsModule,
     MatButtonModule,
     MatIconModule,MatInputModule,
-    FormsModule,MatFormFieldModule
+    FormsModule,
+    MatFormFieldModule,
+    NgxPrintModule
   ],
   providers: [],
   bootstrap: [AppComponent]
