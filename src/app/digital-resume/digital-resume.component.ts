@@ -9,21 +9,21 @@ import {MAT_FORM_FIELD, MatFormField, MatFormFieldControl} from '@angular/materi
 })
 export class DigitalResumeComponent  {
 
-  public firstname='';
-  public middlename='';
-  public Lastname='';
-  public gender='';
-  public contactNo ='';
-  public telephoneNo ='';
-  public email ='';
-  public city ='';
-  public state ='';
-  public pincode ='';
-  public sammary='';
-  public instituteName='';
-  public passingYear='';
-  public percentage='';
-  public courseName ='';
+  // public firstname='';
+  // public middlename='';
+  // public Lastname='';
+  // public gender='';
+  // public contactNo ='';
+  // public telephoneNo ='';
+  // public email ='';
+  // public city ='';
+  // public state ='';
+  // public pincode ='';
+  // public sammary='';
+  // public instituteName='';
+  // public passingYear='';
+  // public percentage='';
+  // public courseName ='';
 
 
   personaldata = new FormGroup({
