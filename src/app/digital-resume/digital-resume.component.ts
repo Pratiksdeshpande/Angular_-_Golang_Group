@@ -1,5 +1,6 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup,FormArray, FormGroupName, Validators } from "@angular/forms";
+import { eduarr } from "../app.module";
 import {MAT_FORM_FIELD, MatFormField, MatFormFieldControl} from '@angular/material/form-field';
 
 @Component({
@@ -7,25 +8,9 @@ import {MAT_FORM_FIELD, MatFormField, MatFormFieldControl} from '@angular/materi
   templateUrl: './digital-resume.component.html',
   styleUrls: ['./digital-resume.component.css']
 })
-export class DigitalResumeComponent  {
+export class DigitalResumeComponent implements OnInit  {
 
-  // public firstname='';
-  // public middlename='';
-  // public Lastname='';
-  // public gender='';
-  // public contactNo ='';
-  // public telephoneNo ='';
-  // public email ='';
-  // public city ='';
-  // public state ='';
-  // public pincode ='';
-  // public sammary='';
-  // public instituteName='';
-  // public passingYear='';
-  // public percentage='';
-  // public courseName ='';
-
-
+  
   personaldata = new FormGroup({
     'userAbout': new FormGroup({
       'UserName': new FormControl(''),
@@ -45,30 +30,65 @@ export class DigitalResumeComponent  {
     'userSammary': new FormControl('')
   });
 
-  educationaldata = new FormGroup({
-    'educationalField': new FormArray([])
-  });
-
-  
-
-  get EDUcontrols(){
-    return (<FormArray>this.educationaldata.get('educationalField')).controls;
+  eduarr = new eduarr();
+  arr: any=[];
+  ngOnInit(){
+    this.arr.push(this.eduarr)
   }
 
-  onsubmit() {
-    console.log(this.personaldata.value);
+  onsubmit(){
+
   }
+
   addEduField(){
-    const control=new FormControl('');
-    (<FormArray>this.educationaldata.get('educationalField')).push(control);
+    this.eduarr= new eduarr()
+    this.arr.push(this.eduarr);
   }
-
+  removeEduField(index: any){
+    this.arr.splice(index,1);
+  }
   display = false;
   generatecv(){
     this.display = true;
-  }
-  
-  
-  constructor(){}
   };
+}
+  // public firstname='';
+  // public middlename='';
+  // public Lastname='';
+  // public gender='';
+  // public contactNo ='';
+  // public telephoneNo ='';
+  // public email ='';
+  // public city ='';
+  // public state ='';
+  // public pincode ='';
+  // public sammary='';
+  // public instituteName='';
+  // public passingYear='';
+  // public percentage='';
+  // public courseName ='';
+
+    // onsubmit() {
+  //   console.log(this.personaldata.value);
+  // }
   
+ // get instituteName(){
+  //   return (<FormArray>this.educationaldata.get('institute')).controls;
+  // }
+  // get passYear(){
+  //   return (<FormArray>this.educationaldata.get('passingYear')).controls;
+  // }
+  // get PercentageCGPA(){
+  //   return (<FormArray>this.educationaldata.get('Percentage')).controls;
+  // }
+  // get courseName(){
+  //   return (<FormArray>this.educationaldata.get('courseName')).controls;
+  // }
+
+  // educationaldata = new FormGroup({
+  //   'institute': new FormArray([]),
+  //   'passingYear': new FormArray([]),
+  //   'Percentage': new FormArray([]),
+  //   'courseName': new FormArray([])
+
+  // });

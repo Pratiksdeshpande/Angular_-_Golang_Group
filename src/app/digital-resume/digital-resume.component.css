@@ -27,7 +27,7 @@
     justify-content: center;
     margin: auto;
     padding: 1rem 6rem;
-    background-color:#dbdbdb;
+    background-color:#000;
 }
 
  .headings{
@@ -43,7 +43,7 @@
     width: auto;
     background-color:#dbdbdb;
     border-radius: 25px;
-    border: 1.5px solid black;
+    /* border: 1.5px solid black; */
     
  }
   .personalDetailFieldDiv{
@@ -60,14 +60,17 @@
 
 
  #educationalDetailDiv{
+    
     padding: 1rem 1rem;
     margin: 10px auto;
     width: auto;
     background-color:#dbdbdb;
     border-radius: 25px;
-    border: 1.5px solid black;
+    /* border: 1.5px solid black; */
  }
   .educationalDetailFieldDiv{
+    /* display: flex;
+    justify-content:center; */
     padding: auto 20px ;
     margin: auto;
   }
@@ -81,6 +84,13 @@
 
   .example-full-width{
     width: 100%;
+  }
+
+  .test{
+      display: flex;
+      flex-direction:row;
+      justify-content:center;
+      flex-wrap: wrap;
   }
 
 .message{

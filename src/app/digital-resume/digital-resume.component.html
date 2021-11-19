@@ -33,24 +33,21 @@
                 <div class="personalDataFields col container-fluid">
                     <mat-form-field appearance="outline">
                         <mat-label>First Name</mat-label>
-                        <input formControlName="UserName" id="firstname" matInput
-                            placeholder="e.g. Sachin">
+                        <input formControlName="UserName" id="firstname" matInput placeholder="e.g. Sachin">
                     </mat-form-field>
                 </div>
 
                 <div class="personalDataFields col container-fluid">
                     <mat-form-field appearance="outline">
                         <mat-label>Middle Name</mat-label>
-                        <input formControlName="UserMiddleName" id="middlename" matInput
-                            placeholder="e.g. Ramesh">
+                        <input formControlName="UserMiddleName" id="middlename" matInput placeholder="e.g. Ramesh">
                     </mat-form-field>
                 </div>
 
                 <div class="personalDataFields col container-fluid">
                     <mat-form-field appearance="outline">
                         <mat-label>Last Name</mat-label>
-                        <input formControlName="UserLastName" id="Lastname" matInput
-                            placeholder="e.g. Tendulkar">
+                        <input formControlName="UserLastName" id="Lastname" matInput placeholder="e.g. Tendulkar">
                     </mat-form-field>
                 </div>
             </div>
@@ -63,24 +60,21 @@
                 <div class="personalDataFields col container-fluid">
                     <mat-form-field appearance="outline">
                         <mat-label>Phone No.</mat-label>
-                        <input formControlName="UserPhoneNo" id="contactNo" matInput
-                            placeholder="9834110970">
+                        <input formControlName="UserPhoneNo" id="contactNo" matInput placeholder="9834110970">
                     </mat-form-field>
                 </div>
 
                 <div class="personalDataFields col container-fluid">
                     <mat-form-field appearance="outline">
                         <mat-label>Telephone No.</mat-label>
-                        <input formControlName="UsertelephoneNo" id="telephoneNo" matInput
-                            placeholder="020-7654321">
+                        <input formControlName="UsertelephoneNo" id="telephoneNo" matInput placeholder="020-7654321">
                     </mat-form-field>
                 </div>
 
                 <div class="personalDataFields col container-fluid">
                     <mat-form-field appearance="outline">
                         <mat-label>E-mail Address</mat-label>
-                        <input formControlName="UserEmail" id="email" matInput
-                            placeholder="pdeshpande666@gmail.com">
+                        <input formControlName="UserEmail" id="email" matInput placeholder="pdeshpande666@gmail.com">
                     </mat-form-field>
                 </div>
             </div>
@@ -100,16 +94,14 @@
                 <div class="personalDataFields col container-fluid">
                     <mat-form-field appearance="outline">
                         <mat-label>State</mat-label>
-                        <input formControlName="userstate" id="state" matInput
-                            placeholder="Maharashtra">
+                        <input formControlName="userstate" id="state" matInput placeholder="Maharashtra">
                     </mat-form-field>
                 </div>
 
                 <div class="personalDataFields col container-fluid">
                     <mat-form-field appearance="outline">
                         <mat-label>Pin-Code</mat-label>
-                        <input formControlName="userpincode" id="pincode" matInput
-                            placeholder="411041">
+                        <input formControlName="userpincode" id="pincode" matInput placeholder="411041">
                     </mat-form-field>
                 </div>
             </div>
@@ -127,10 +119,6 @@
                     </mat-form-field>
                 </div>
             </div>
-
-            <div class="personalDetailFieldDiv text-center container-fluid"><button type="submit"
-                    class="btn btn-primary btn-sm">Submit</button></div>
-
         </form>
 
     </div>
@@ -140,46 +128,77 @@
     <div class="container col py-2" id="educationalDetailDiv">
         <h1 class="text-left">Educational Details</h1>
 
-        <form [formGroup]="educationaldata">
+        <form (ngSubmit)="onsubmit()">
 
             <!-- Educational details Field -->
-            <div class="educationalDetailFieldDiv row container-fluid" formArrayName="educationalField" >
+            <div class="educationalDetailFieldDiv row container-fluid" *ngFor="let obj of arr; let i=index">
+                <div class="test">
 
-                <div class="educationalDataFields col container-fluid" *ngFor="let item of EDUcontrols; let i = index">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Institute Name</mat-label>
-                        <input id="instituteName" [formControlName]="i" matInput placeholder="ABC college">
-                    </mat-form-field>
+                    <div class="educationalDataFields col container-fluid">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Institute Name</mat-label>
+                            <input [(ngModel)]="obj.institute" name="instituteName{{i}}" id="instituteName" matInput
+                                placeholder="ABC college">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="educationalDataFields col container-fluid">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Admission Year</mat-label>
+                            <input [(ngModel)]="obj.admissionyear" name="admissionyear{{i}}" id="admissionyear" matInput
+                                placeholder="2017">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="educationalDataFields col container-fluid">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Passing Year</mat-label>
+                            <input [(ngModel)]="obj.passyear" name="passingYear{{i}}" id="passingYear" matInput
+                                placeholder="2021">
+                        </mat-form-field>
+                    </div>
                 </div>
+                <br>
+                <div class="test">
+                    <div class="educationalDataFields col container-fluid">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Percentage/CGPA</mat-label>
+                            <input [(ngModel)]="obj.percentage" name="percentage{{i}}" id="percentage" matInput
+                                placeholder="78%">
+                        </mat-form-field>
+                    </div>
 
-                <div class="educationalDataFields col container-fluid" *ngFor="let item of EDUcontrols; let i = index">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Passing Year</mat-label>
-                        <input id="passingYear" [formControlName]="i" matInput placeholder="2021">
-                    </mat-form-field>
+                    <div class="educationalDataFields container-fluid">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Course Name</mat-label>
+                            <input [(ngModel)]="obj.coursename" name="courseName{{i}}" id="courseName" matInput
+                                placeholder="e.g. MBBS">
+                        </mat-form-field>
+                    </div>
+                    <!-- to adjust the symmetry of UI -->
+                    <div class="educationalDataFields container-fluid" *ngIf="i==0" style="visibility: hidden;">
+                        <button type="button" class="btn btn-sm btn-warning"></button>
+                    </div>
+                    <!-- remove button  -->
+                    <div class="educationalDataFields container-fluid" *ngIf="i!=0">
+                        <button (click)="removeEduField(i)" type="button" class="btn btn-sm btn-warning">Remove</button>
+                    </div>
                 </div>
-
-                <div class="educationalDataFields col container-fluid" *ngFor="let item of EDUcontrols; let i = index">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Percentage/CGPA</mat-label>
-                        <input id="percentage" [formControlName]="i" matInput placeholder="78%">
-                    </mat-form-field>
-                </div>
-
-                <div class="educationalDataFields container-fluid text-left" *ngFor="let item of EDUcontrols; let i = index">
-                    <mat-form-field appearance="outline">
-                        <mat-label>Course Name</mat-label>
-                        <input  id="courseName" [formControlName]="i" matInput placeholder="e.g. MBBS">
-                    </mat-form-field>
-                </div>
-
+                <hr>
+                <button type="submit" style="display: none;"></button>
             </div>
 
+            <!-- to add new eduacational detail field  -->
             <div class="text-center container-fluid">
                 <button type="button" (click)="addEduField()" class="btn btn-lg btn-secondary">Add Field</button>
             </div>
 
         </form>
     </div>
-    
+
+</div>
+<!-- Print CV button div-->
+<div class="container-fluid text-center">
+    <button printSectionId="cvcontainer" styleSheetFile="digital-resume.component.css" ngxPrint
+        class="btn btn-primary btn-lg" type="button">Print</button>
 </div>

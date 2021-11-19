@@ -34,3 +34,10 @@ import { NgxPrintModule } from "ngx-print";
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export class eduarr { 
+  institute:any;
+  admissionyear:any;
+  passyear:any;
+  percentage:any;
+  coursename:any;
+}
