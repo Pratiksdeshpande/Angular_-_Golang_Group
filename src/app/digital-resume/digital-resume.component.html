@@ -11,7 +11,7 @@
             <!-- Personal Details div-->
             <div class="container col py-2" id="personalDetailDiv">
 
-                <form [formGroup]="personaldata" (ngSubmit)="onsubmit()">
+                <form [formGroup]="personaldata" (ngSubmit)="onsubmit()" #personaldataform='ngForm'>
 
                     <!-- About section -->
                     <h4 class="text-center headings">About</h4>
@@ -99,6 +99,7 @@
                             </mat-form-field>
                         </div>
                     </div>
+                    <button type="submit" mat-flat-button color="primary">Save</button>
                 </form>
 
             </div>
@@ -382,10 +383,12 @@
             <div class="container-fluid text-center" id="previewDiv">
                 <div class="row">
                     <div class="col-md-4" id="leftCv">
-
+                        
                     </div>
                     <div class="col-md-8" id="rightCv">
-
+                        <div>
+                            <p class="display-3"></p>
+                        </div>
                     </div>
                 </div>
             </div>
