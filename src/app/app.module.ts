@@ -11,6 +11,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from "@angular/material/input";
 import { NgxPrintModule } from "ngx-print";
+import { MatStepperModule } from "@angular/material/stepper";
+import { MatSidenavModule } from "@angular/material/sidenav";
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { NgxPrintModule } from "ngx-print";
     MatIconModule,MatInputModule,
     FormsModule,
     MatFormFieldModule,
+    MatStepperModule,MatSidenavModule,
     NgxPrintModule
   ],
   providers: [],

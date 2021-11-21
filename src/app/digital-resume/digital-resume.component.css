@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+
 #header{
 
     width:100% ;
@@ -9,17 +10,6 @@
     /* height:fit-content ; */
     margin-bottom: 0rem;
 }
- #quote{
-    font-family: 'Yuji Syuku', serif;
-    
-}
- #source{
-    font-family:-apple-system, 'Open Sans',BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    color: white;
-    margin-bottom: 0rem;
-}
-
-
 #maincontainerdiv{
     /* display: none; */
     display: flex;
@@ -27,7 +17,7 @@
     justify-content: center;
     margin: auto;
     padding: 1rem 6rem;
-    background-color:#000;
+    background-color:rgb(255, 255, 255);
 }
 
  .headings{
@@ -41,7 +31,7 @@
     padding: 1rem 1rem;
     margin: 10px auto;
     width: auto;
-    background-color:#dbdbdb;
+    background-color:#ffffff;
     border-radius: 25px;
     /* border: 1.5px solid black; */
     
@@ -64,7 +54,7 @@
     padding: 1rem 1rem;
     margin: 10px auto;
     width: auto;
-    background-color:#dbdbdb;
+    background-color:#ffffff;
     border-radius: 25px;
     /* border: 1.5px solid black; */
  }
@@ -85,13 +75,10 @@
   .example-full-width{
     width: 100%;
   }
-
-  .test{
-      display: flex;
-      flex-direction:row;
-      justify-content:center;
-      flex-wrap: wrap;
-  }
+  /* #removebtn{
+    display: flex;
+    justify-content: end;
+} */
 
 .message{
     width: 12em;
@@ -148,3 +135,19 @@
     align-items:flex-start;
     color: white;
 }
+.guidebuttons{
+    margin: 2% 3%;
+}
+.guidebtndiv{
+display: flex;
+justify-content:space-between;
+}
+ /* #quote{
+    font-family: 'Yuji Syuku', serif;
+    
+}
+ #source{
+    font-family:-apple-system, 'Open Sans',BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    color: white;
+    margin-bottom: 0rem;
+} */

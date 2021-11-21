@@ -9,3 +9,14 @@
     width: 60vw; */
     margin: auto;
 }
+#menubtn{
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+
+}
+#linkbox{
+    display: flex;
+    flex-direction: column;
+    
+}
