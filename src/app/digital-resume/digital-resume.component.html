@@ -6,7 +6,6 @@
 
 <!-- Main div container-->
 <div class="container-fluid" id="maincontainerdiv">
-
     <mat-horizontal-stepper class="container-fluid">
         <mat-step label="Personal Details">
             <!-- Personal Details div-->
@@ -100,24 +99,29 @@
                             </mat-form-field>
                         </div>
                     </div>
-
-                    <!-- Sammary section  -->
-                    <h4 class="text-center headings">Sammary</h4>
-
-                    <div class="personalDetailFieldDiv row container-fluid" id="addressdata">
-
-                        <div class="personalDataFields col container-fluid">
-                            <mat-form-field class="example-full-width personalDataFields" appearance="outline">
-                                <mat-label>Short description</mat-label>
-                                <textarea formControlName="userSammary" id="sammary" rows="5" matInput
-                                    placeholder="Write a short description about you. Ex. Creative software developer with over 5 years of experience in...."></textarea>
-                            </mat-form-field>
-                        </div>
-                    </div>
                 </form>
 
             </div>
             <div class="guidebtndiv" style="justify-content: end;">
+                <button mat-fab matStepperNext color="primary" class="guidebuttons">Next</button>
+            </div>
+        </mat-step>
+        <mat-step label="Objective">
+            <form [formGroup]="objective">
+                <!-- Objective section  -->
+                <div class="personalDetailFieldDiv row container-fluid" id="addressdata">
+
+                    <div class="personalDataFields col container-fluid">
+                        <mat-form-field class="example-full-width personalDataFields" appearance="outline">
+                            <!-- <mat-label>Short description</mat-label> -->
+                            <textarea formControlName="userobjective" id="sammary" rows="10" cols="20" matInput
+                                placeholder="e.g. Would like to gain the necessary experience to hopefully become Operations Manager of all services running across the platform...."></textarea>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </form>
+            <div class="guidebtndiv">
+                <button mat-fab matStepperPrevious color="primary" class="guidebuttons">Back</button>
                 <button mat-fab matStepperNext color="primary" class="guidebuttons">Next</button>
             </div>
         </mat-step>
@@ -127,7 +131,7 @@
                 <form (ngSubmit)="onsubmit()">
 
                     <!-- Educational details Field -->
-                    <div class="educationalDetailFieldDiv container-fluid" *ngFor="let obj of arr; let i=index">
+                    <div class="educationalDetailFieldDiv container-fluid" *ngFor="let obj of Earr; let i=index">
                         <div class="row">
                             <!-- Institute Name -->
                             <div class="educationalDataFields col container-fluid">
@@ -137,21 +141,12 @@
                                         matInput placeholder="ABC college">
                                 </mat-form-field>
                             </div>
-
-                            <!-- Admission Year -->
-                            <!-- <div class="educationalDataFields col-md-4 container-fluid">
-                        <mat-form-field appearance="outline">
-                            <mat-label>Admission Year</mat-label>
-                            <input [(ngModel)]="obj.admissionyear" name="admissionyear{{i}}" id="admissionyear" matInput
-                                placeholder="2017">
-                        </mat-form-field>
-                    </div> -->
                             <!-- Passing Year -->
                             <div class="educationalDataFields col container-fluid">
                                 <mat-form-field appearance="outline">
                                     <mat-label>Passing Year</mat-label>
-                                    <input [(ngModel)]="obj.passyear" name="passingYear{{i}}" id="passingYear" matInput
-                                        placeholder="2021">
+                                    <input type="month" [(ngModel)]="obj.passyear" name="passingYear{{i}}"
+                                        id="passingYear" matInput placeholder="2021">
                                 </mat-form-field>
                             </div>
                             <!-- Percentage/CGPA -->
@@ -165,7 +160,7 @@
                             <!-- Course Name -->
                             <div class="educationalDataFields col container-fluid">
                                 <mat-form-field appearance="outline">
-                                    <mat-label>Course Name</mat-label>
+                                    <mat-label>Degree</mat-label>
                                     <input [(ngModel)]="obj.coursename" name="courseName{{i}}" id="courseName" matInput
                                         placeholder="e.g. MBBS">
                                 </mat-form-field>
@@ -173,9 +168,9 @@
                         </div>
                         <div>
                             <!-- remove button  -->
-                            <div class="educationalDataFields container-fluid" *ngIf="i!=0" id="removebtn">
-                                <button (click)="removeEduField(i)" type="button"
-                                    class="btn btn-sm btn-warning">Remove</button>
+                            <div class="removebtn educationalDataFields container-fluid" *ngIf="i!=0">
+                                    <button mat-raised-button color="warn" (click)="removeEduField(i)">Remove</button>
+                                    
                             </div>
                         </div>
                         <hr>
@@ -184,8 +179,8 @@
 
                     <!-- to add new eduacational detail field  -->
                     <div class="text-center container-fluid">
-                        <button type="button" (click)="addEduField()" class="btn btn-lg btn-secondary">Add
-                            Field</button>
+                        <button mat-raised-button color="accent" (click)="addEduField()">Add</button>
+                        
                     </div>
 
                 </form>
@@ -196,26 +191,214 @@
             </div>
         </mat-step>
         <mat-step label="Work Details">
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo doloribus animi maiores eligendi
-                    obcaecati dolore cum placeat quod molestias, nemo similique, impedit hic commodi dolorem odio
-                    ratione, saepe exercitationem.</p>
+            <!-- Work Details div-->
+            <div class="container col py-2" id="workDetailDiv">
+                <form (ngSubmit)="onsubmit()">
+
+                    <!-- Work details Field -->
+                    <div class="workDetailFieldDiv container-fluid" *ngFor="let object of Warr ; let i=index">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <!-- Company Name -->
+                                    <div class="workDataFields col container-fluid">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Company Name</mat-label>
+                                            <input [(ngModel)]="object.company" name="companyName{{i}}" id="companyName"
+                                                matInput placeholder="Siemens">
+                                        </mat-form-field>
+                                    </div>
+                                    <!-- Position  -->
+                                    <div class="workDataFields col container-fluid">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Position</mat-label>
+                                            <input [(ngModel)]="object.position" name="position{{i}}" id="position"
+                                                matInput placeholder="Front-End Developer">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- startmonth  -->
+                                    <div class="workDataFields col container-fluid">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Start-Date</mat-label>
+                                            <input type="month" [(ngModel)]="object.startmonth" name="startmonth{{i}}"
+                                                id="startmonth" matInput>
+                                        </mat-form-field>
+                                    </div>
+                                    <!-- endmonth  -->
+                                    <div class="workDataFields col container-fluid">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>End-Date</mat-label>
+                                            <input type="month" [(ngModel)]="object.endmonth" name="endmonth{{i}}"
+                                                id="endmonth" matInput>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row">
+                                    <!-- Description of work experience  -->
+                                    <div class="example-full-width workDataFields">
+
+                                        <mat-form-field class="example-full-width workDataFields" appearance="outline">
+                                            <mat-label>Description of work experience</mat-label>
+                                            <textarea [(ngModel)]="object.description" name="description{{i}}"
+                                                id="description" matInput rows="6"
+                                                placeholder="e.g. Development of the brand's products on the international market. Continually adapting products to the way the market was evolving and the opportunities available..."></textarea>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <button type="submit" style="display: none;">
+                                    </button>
+                                    <!-- remove button  -->
+                                    <div>
+                                        <div class="removebtn workDataFields container-fluid" *ngIf="i!=0">
+                                                <button mat-raised-button color="warn" (click)="removeWorkField(i)">Remove</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <!-- to add new work detail field  -->
+                    <div class="text-center container-fluid">
+                        <button mat-raised-button color="accent" (click)="addWorkField()">Add</button>
+                    </div>
+                </form>
             </div>
             <div class="guidebtndiv">
                 <button mat-fab matStepperPrevious color="primary" class="guidebuttons">Back</button>
                 <button mat-fab matStepperNext color="primary" class="guidebuttons">Next</button>
             </div>
         </mat-step>
+        <mat-step label="Skills">
+            <form (ngSubmit)="onsubmit()">
+
+                <div class="row">
+                    <div class="col-md-7 text-center">
+                        <!-- skill heading -->
+                        <br>
+                        <div class="row">
+                            <div class="col" style="align-items: center; text-align:center;">
+                                <h2>Skills</h2>
+                            </div>
+
+                            <!-- To add new SKill field  -->
+                            <div class="col text-center container-fluid">
+                                <button mat-raised-button color="accent" (click)="addSkill()">Add</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+
+                        <!-- Skill Data Field -->
+                        <div class="skillDataField container-fluid" *ngFor="let skillobj of Sarr ; let i=index">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width skillDataField" appearance="outline">
+                                        <mat-label>Skill</mat-label>
+                                        <input [(ngModel)]="skillobj.skill" name="skill{{i}}" id="skill" matInput
+                                            placeholder="Leadership">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="skillDataField">
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Level</mat-label>
+                                            <mat-select>
+                                                <mat-option value="1">Beginner</mat-option>
+                                                <mat-option value="2">Intermediate</mat-option>
+                                                <mat-option value="3">Advance</mat-option>
+                                                <mat-option value="4">Expert</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <!-- remove button  -->
+                                    <div class="removebtn container-fluid" *ngIf="i!=0">
+                                        <!-- <button (click)="removeSkillField(i)" type="button"
+                                            class="btn btn-sm btn-warning">Remove</button> -->
+                                        <button mat-raised-button color="warn"
+                                            (click)="removeSkillField(i)">Remove</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-5 text-center">
+                        <!-- language heading  -->
+                        <br>
+                        <div class="row">
+                            <div class="col" style="align-items: center; text-align:center;">
+                                <h2>Languages</h2>
+                            </div>
+                            <!-- To add new Language field  -->
+                            <div class="col text-right container-fluid">
+                                <button mat-raised-button color="accent" (click)="addLanguage()">Add</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <br>
+
+                        <!-- Language Data Field -->
+                        <div class="languageDataField container-fluid" *ngFor="let langobj of Larr ; let i=index">
+
+                            <div class="row">
+                                <div class="col">
+                                    <mat-form-field class="example-full-width languageDataField" appearance="outline">
+                                        <mat-label>Language</mat-label>
+                                        <input [(ngModel)]="langobj.language" name="language{{i}}" id="language"
+                                            matInput placeholder="e.g. English">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col">
+                                    <!-- remove button  -->
+                                    <div class="removebtn container-fluid" *ngIf="i!=0">
+                                        <button mat-raised-button color="warn"
+                                        (click)="removeLanguageField(i)">Remove</button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+            <div class="guidebtndiv">
+                <button mat-fab matStepperPrevious color="primary" class="guidebuttons">Back</button>
+                <button mat-fab matStepperNext color="primary" class="guidebuttons">Next</button>
+            </div>
+        </mat-step>
         <mat-step label="Preview">
+            <div class="container-fluid text-center" id="previewDiv">
+                <div class="row">
+                    <div class="col-md-4" id="leftCv">
+
+                    </div>
+                    <div class="col-md-8" id="rightCv">
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
             <!-- Print CV button div-->
             <div class="container-fluid text-center">
-                <button printSectionId="cvcontainer" styleSheetFile="digital-resume.component.css" ngxPrint
-                    class="btn btn-primary btn-lg" type="button">Print</button>
+                <button mat-flat-button color="accent">Print</button>
             </div>
             <div class="guidebtndiv">
                 <button mat-fab matStepperPrevious color="primary" class="guidebuttons">Back</button>
             </div>
         </mat-step>
     </mat-horizontal-stepper>
-
 </div>

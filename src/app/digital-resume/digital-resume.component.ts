@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup,FormArray, FormGroupName, Validators } from "@angular/forms";
-import { eduarr } from "../app.module";
+import { educationalFieldarray,workFieldarray,skillArray,languageArray } from "../app.module";
 import {MAT_FORM_FIELD, MatFormField, MatFormFieldControl} from '@angular/material/form-field';
 
 @Component({
@@ -10,7 +10,6 @@ import {MAT_FORM_FIELD, MatFormField, MatFormFieldControl} from '@angular/materi
 })
 export class DigitalResumeComponent implements OnInit  {
 
-  
   personaldata = new FormGroup({
     'userAbout': new FormGroup({
       'UserName': new FormControl(''),
@@ -27,26 +26,61 @@ export class DigitalResumeComponent implements OnInit  {
       'userstate': new FormControl(''),
       'userpincode': new FormControl(''),
     }),
-    'userSammary': new FormControl('')
+    // 'userSammary': new FormControl('')
   });
 
-  eduarr = new eduarr();
-  arr: any=[];
+  objective = new FormGroup({
+    userobjective: new FormControl(''),
+  })
+
+  educationalFieldarray = new educationalFieldarray();
+  Earr: any=[];
+  workFieldarray =new workFieldarray();
+  Warr: any =[];
+  skillArray = new skillArray();
+  Sarr: any=[];
+  languageArray = new languageArray();
+  Larr: any=[];
+
   ngOnInit(){
-    this.arr.push(this.eduarr)
-  }
-
-  onsubmit(){
-
-  }
+    this.Earr.push(this.educationalFieldarray);
+    this.Warr.push(this.workFieldarray);
+    this.Sarr.push(this.skillArray);
+    this.Larr.push(this.languageArray);
+  };
+  onsubmit(){ }
 
   addEduField(){
-    this.eduarr= new eduarr()
-    this.arr.push(this.eduarr);
+    this.educationalFieldarray= new educationalFieldarray()
+    this.Earr.push(this.educationalFieldarray);
+  };
+  addWorkField(){
+    this.workFieldarray= new workFieldarray()
+    this.Warr.push(this.workFieldarray);
+  };
+  addSkill(){
+    this.skillArray= new skillArray()
+    this.Sarr.push(this.skillArray);
   }
+  addLanguage(){
+    this.languageArray= new languageArray()
+    this.Larr.push(this.languageArray);
+  }
+
   removeEduField(index: any){
-    this.arr.splice(index,1);
+    this.Earr.splice(index,1);
   }
+  removeWorkField(index: any){
+    this.Warr.splice(index,1);
+  }
+  removeSkillField(index: any){
+    this.Sarr.splice(index,1);
+  }
+  removeLanguageField(index: any){
+    this.Larr.splice(index,1);
+  }
+
+
   display = false;
   generatecv(){
     this.display = true;

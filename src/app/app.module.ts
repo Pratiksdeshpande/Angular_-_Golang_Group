@@ -13,6 +13,7 @@ import { MatInputModule } from "@angular/material/input";
 import { NgxPrintModule } from "ngx-print";
 import { MatStepperModule } from "@angular/material/stepper";
 import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatSelectModule } from "@angular/material/select";
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
     MatButtonModule,
     MatIconModule,MatInputModule,
     FormsModule,
-    MatFormFieldModule,
+    MatFormFieldModule,MatSelectModule,
     MatStepperModule,MatSidenavModule,
     NgxPrintModule
   ],
@@ -37,10 +38,23 @@ import { MatSidenavModule } from "@angular/material/sidenav";
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-export class eduarr { 
+export class educationalFieldarray { 
   institute:any;
   admissionyear:any;
   passyear:any;
   percentage:any;
   coursename:any;
+}
+export class workFieldarray { 
+  company:any;
+  position:any;
+  startmonth:any;
+  endmonth:any;
+  description:any;
+}
+export class skillArray{
+  skill:any;
+}
+export class languageArray{
+  language: any;
 }

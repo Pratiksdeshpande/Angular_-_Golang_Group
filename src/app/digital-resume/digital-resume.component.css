@@ -56,11 +56,8 @@
     width: auto;
     background-color:#ffffff;
     border-radius: 25px;
-    /* border: 1.5px solid black; */
  }
   .educationalDetailFieldDiv{
-    /* display: flex;
-    justify-content:center; */
     padding: auto 20px ;
     margin: auto;
   }
@@ -72,13 +69,49 @@
     margin: auto;
    }
 
+ #workDetailDiv{
+    padding: 1rem 1rem;
+    margin: 10px auto;
+    width: auto;
+    background-color:#ffffff;
+    border-radius: 25px;
+ }
+ .workDetailFieldDiv{
+    padding: auto 20px ;
+    margin: auto;
+  }
+  .workDataFields{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    margin: auto;
+   }
+
   .example-full-width{
     width: 100%;
   }
-  /* #removebtn{
-    display: flex;
-    justify-content: end;
-} */
+
+.skillDataField{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    margin: auto;
+    padding: 0px 10px;
+}
+
+.languageDataField{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    margin: auto;
+}
+
+.removebtn{
+    padding: 10px;
+}
 
 .message{
     width: 12em;
@@ -87,17 +120,6 @@
     text-align: start;
     color: rgb(255 0 0);
     background-color: #ffd0d0;
-}
-
-#cvcontainer{
-    /* display: none; */
-    width: auto;
-}
-#leftsidecv{
-    background-color: rgb(0, 26, 87);
-}
-#rightsidecv{
-    background-color: rgb(255, 187, 187);
 }
 #userProfileImage{
     width: 60%;
@@ -141,6 +163,17 @@
 .guidebtndiv{
 display: flex;
 justify-content:space-between;
+}
+#previewDiv{
+    width: 60vw;
+    height: 60vw;
+    background-color: rgb(216, 216, 216);
+}
+#leftCv{
+    background-color: rgb(0, 26, 87);
+}
+#rightCv{
+    background-color: rgb(255, 187, 187);
 }
  /* #quote{
     font-family: 'Yuji Syuku', serif;
